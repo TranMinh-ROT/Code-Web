@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý - Bún bò Huế anh Minh</title>
+    <link rel="stylesheet" href="staff-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-bowl-rice"></i>
+            <h1>Bún bò Huế anh Minh</h1>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <div class="tables-container">
+            <div id="table1" class="table" onclick="handleTableClick()">
+                <span class="table-number">Bàn số 1</span>
+            </div>
+        </div>
+
+        <!-- Modal chi tiết đơn hàng -->
+        <div id="orderModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeOrderModal()">&times;</span>
+                <h2>Chi tiết đơn hàng - Bàn 1</h2>
+                <div id="orderDetails" class="order-details"></div>
+                <div id="orderTotal" class="order-total"></div>
+                <div class="action-buttons">
+                    <button id="preparedBtn" onclick="markAsPrepared()">
+                        <i class="fas fa-check"></i> Đã chuẩn bị
+                    </button>
+                    <button id="paidBtn" onclick="markAsPaid()">
+                        <i class="fas fa-money-bill"></i> Đã thanh toán
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="staff-js.js"></script>
+</body>
+</html>
